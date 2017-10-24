@@ -1,21 +1,3 @@
-exports.rgbToHex = function(red, green, blue) {
-
-  // convert from base ten to base 16
-  var redHex   = red.toString(16);
-  var greenHex = green.toString(16);
-  var blueHex  = blue.toString(16);
-
-  return pad(redHex) + pad(greenHex) + pad(blueHex);
-};
-
-/*
-If the hex value passed in is length one, pre-pad with a zero,
-otherwise return the original hex.
-*/
-function pad(hex) {
-  return (hex.length === 1 ? "0" + hex : hex);
-}
-
 exports.hexToRgb = function(hex) {
 
   // Split the hex value into pieces, convert back to
@@ -27,3 +9,5 @@ exports.hexToRgb = function(hex) {
   return [red, green, blue];
 
 };
+
+
